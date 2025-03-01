@@ -1,26 +1,32 @@
-import React from 'react';
+import React from "react";
+import { ChevronDoubleDownIcon } from "@heroicons/react/solid";
 
-const Hero = () => {
+const Hero = ({ scrollToSection }) => {
     return (
         <section
-            id="home"
-            className="bg-cover bg-center h-96"
+            className="h-screen flex flex-col justify-center items-center text-center relative"
             style={{
-                backgroundImage: "url('/images/hero-bg.jpg')",
-                backgroundSize: "contain",  // Fotoğrafı tam olarak sığdırmak
-                backgroundPosition: "center",  // Fotoğrafı ortalamak
-                backgroundAttachment: "fixed",  // Sayfa kaydırıldıkça fotoğrafın sabit kalması
-                backgroundRepeat: "no-repeat"  // Fotoğrafın tekrar etmemesi
+                backgroundImage: 'url("/images/hero-bg.jpg")',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
             }}
         >
-            <div className="flex justify-center items-center h-full bg-black bg-opacity-50">
-                <div className="text-center text-white">
-                    <h1 className="text-4xl font-bold">Çamlık Sitesi</h1>
-                    <p className="mt-4 text-xl">Geniş yaşam alanları, sosyal donatılar ve doğa ile iç içe bir yaşam. Her şey sizin için düşünüldü!</p>
-                </div>
+            <div className="absolute inset-0 bg-[rgba(0,0,0,0.5]"></div>
+
+            <div className="relative z-10 p-8 rounded-lg text-[#FFFFFF] bg-[rgba(0,0,0,0.3)] shadow-lg">
+                <h1 className="text-6xl font-bold text-[#FFFFFF]">Çamlık Sitesi</h1>
+                <p className="mt-4 text-xl text-[#F1F1F1]">Geniş yaşam alanları, sosyal donatılar ve doğa ile iç içe bir yaşam. Yaşamı güzelleştiren proje!</p>
+            </div>
+
+            {/* Yanıp sönen aşağı ok */}
+            <div
+                className="absolute bottom-10 flex justify-center items-center animate-bounce cursor-pointer"
+                onClick={scrollToSection}
+            >
+                <ChevronDoubleDownIcon className="w-12 h-12 text-white opacity-80 hover:opacity-100 transition duration-300" />
             </div>
         </section>
     );
-}
+};
 
 export default Hero;
