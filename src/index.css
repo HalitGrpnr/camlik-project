@@ -27,4 +27,180 @@ body {
   padding: 0 16px;
 }
 
+/* Flex ve grid düzenini merkezi hale getiren bazı yardımcı stiller */
+.text-sm {
+  font-size: 1rem; /* Küçük metin boyutu */
+}
 
+.text-lg {
+  font-size: 1.125rem; /* Daha büyük metin boyutu */
+}
+
+.text-xl {
+  font-size: 1.25rem; /* Daha büyük metin boyutu */
+}
+
+.text-2xl {
+  font-size: 1.5rem; /* Çift büyüklük */
+}
+
+.text-4xl {
+  font-size: 2.25rem; /* Daha büyük metin boyutu */
+}
+
+.text-6xl {
+  font-size: 3.75rem; /* En büyük metin boyutu */
+}
+
+/* Tailwind'de flex düzeni ile tam merkezde hizalama */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Flexbox içeriklerini responsive olarak hizalamak için */
+@media (max-width: 768px) {
+  /* Hero'daki başlık ve metni küçült */
+  .text-6xl {
+    font-size: 3rem; /* Mobilde daha küçük */
+  }
+
+  /* Site konumundaki metin boyutlarını küçült */
+  .text-lg {
+    font-size: 1rem;
+  }
+
+  .text-xl {
+    font-size: 1.2rem;
+  }
+}
+
+/* Yalnızca hover özelliğini eklemek */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Tailwind flexbox responsive */
+@media (max-width: 768px) {
+  .w-full {
+    width: 100%;
+  }
+
+  .max-w-xl {
+    max-width: 600px; /* Yüksek ekranlarda metin çok geniş olmamalı */
+  }
+
+  .py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .mt-4 {
+    margin-top: 1rem;
+  }
+
+  .mt-8 {
+    margin-top: 2rem;
+  }
+
+  .mt-12 {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Tailwind medyanın bir boyutundan büyük olduğu zaman */
+  .md\:text-6xl {
+    font-size: 4rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.5rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.25rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Hero arka planı ve hero içerisindeki stil */
+.hero-section {
+  height: 100vh; /* Ekranın tamamı */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #f1f1f1;
+  margin-top: 1rem;
+}
+
+.hero-section .scroll-btn {
+  position: absolute;
+  bottom: 20px;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+/* Hero animasyonları */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Footer stilini küçük ekranlara uyumlu hale getirmek */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  footer p {
+    font-size: 1rem;
+  }
+}

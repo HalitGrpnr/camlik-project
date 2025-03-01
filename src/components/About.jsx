@@ -26,6 +26,20 @@ const About = () => {
         autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
+        responsive: [
+            {
+                breakpoint: 1024, // 1024px ve daha geniş ekranlarda
+                settings: {
+                    slidesToShow: 3, // Daha geniş ekranlarda 3 öğe göster
+                },
+            },
+            {
+                breakpoint: 640, // 640px ve daha küçük ekranlarda
+                settings: {
+                    slidesToShow: 1, // Küçük ekranlarda sadece 1 öğe göster
+                },
+            },
+        ],
     };
 
     // Smooth Scroll to Site Location Section
@@ -51,118 +65,127 @@ const About = () => {
                 <div className="mt-8">
                     <Slider {...settings}>
                         {/* Card 1 */}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Site Planı</h3>
-                                <p className="mt-4">Geniş oturum alanında kurgulanmış site mimarisi.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Geniş oturum alanında kurgulanmış site mimarisi.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/plan-1.jpg"
                                     alt="plan"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/plan-1.jpg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 1 */}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 2 */}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Havuz</h3>
-                                <p className="mt-4">Geniş yüzme havuzuyla yazın keyfini çıkarın.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Geniş yüzme havuzuyla yazın keyfini çıkarın.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/havuz-1.jpeg"
                                     alt="Havuz"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/havuz-1.jpeg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 2 */}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 3 */}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Basket Sahası</h3>
-                                <p className="mt-4">Sağlıklı bir yaşam için basket sahasında spor yapın.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Sağlıklı bir yaşam için basket sahasında spor yapın.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/basket-1.jpeg"
                                     alt="Basket Sahası"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/basket-1.jpeg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 3*/}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 4 */}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Sosyal Alanlar</h3>
-                                <p className="mt-4">Ailenizle huzurlu vakit geçirebileceğiniz kamelyalar.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Ailenizle huzurlu vakit geçirebileceğiniz kamelyalar.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/kamelya-1.jpeg"
                                     alt="kamelya"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/kamelya-1.jpeg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 3*/}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 5*/}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Çocuk Park</h3>
-                                <p className="mt-4">Çocukların güvenle eğlenebileceği park alanları.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Çocukların güvenle eğlenebileceği park alanları.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/park-1.jpg"
                                     alt="park"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/park-1.jpg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 4*/}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 6*/}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Otopark</h3>
-                                <p className="mt-4">Açık ve kapalı otoparklar ile aracınız her zaman güvende.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Açık ve kapalı otoparklar ile aracınız her zaman güvende.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/otopark-1.jpg"
                                     alt="otopark"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/otopark-1.jpg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 5*/}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 7*/}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Mutfak</h3>
-                                <p className="mt-4">Modern ve şık bir mutfak tasarımı ile hayatınızı kolaylaştırın.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Modern ve şık bir mutfak tasarımı ile hayatınızı kolaylaştırın.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/mutfak-1.jpeg"
                                     alt="mutfak"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/mutfak-1.jpeg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 6*/}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 8*/}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Oturma Odası</h3>
-                                <p className="mt-4">Ailenizle rahatça vakit geçirebileceğiniz ferah bir oturma odası.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Ailenizle rahatça vakit geçirebileceğiniz ferah bir oturma odası.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/oturma-1.jpg"
                                     alt="oturma"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/oturma-1.jpg")}
                                 />
                             </div>
                         </div>
-                        {/* Card 6*/}
-                        <div className="p-4">
-                            <div className="bg-white/30 p-6 rounded-lg shadow-md">
+                        {/* Card 9*/}
+                        <div className="p-4 flex flex-col justify-between">
+                            <div className="bg-white/30 p-6 rounded-lg shadow-md h-full flex flex-col justify-between">
                                 <h3 className="text-xl font-semibold">Yatak Odası</h3>
-                                <p className="mt-4">Zarif ve modern tasarımıyla geniş yatak odası.</p>
+                                 <p className="mt-4 text-ellipsis overflow-hidden line-clamp-3">Zarif ve modern tasarımıyla geniş yatak odası.</p>
                                 <img
                                     className="mt-4 w-full h-64 object-cover rounded-lg transition-all duration-500 ease-in-out hover:scale-105 cursor-pointer"
                                     src="/images/yatak-2.jpg"
                                     alt="yatak"
+                                    loading="lazy"
                                     onClick={() => openModal("/images/yatak-2.jpg")}
                                 />
                             </div>

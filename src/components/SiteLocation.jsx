@@ -8,7 +8,7 @@ const SiteLocation = () => {
     return (
         <section
             id="site-location"
-            className="h-screen flex flex-col justify-center items-center text-center"
+            className="h-screen flex flex-col justify-center items-center text-center p-4"
             style={{
                 backgroundImage: 'url("/images/img.png")',
                 backgroundSize: "cover",
@@ -17,7 +17,7 @@ const SiteLocation = () => {
         >
             <div className="w-full px-6">
                 <h2 className="text-4xl font-bold">Site Konumu</h2>
-                <p className="mt-4 text-lg">Şehrin kalbinde, toplu ulaşıma yakın muhteşem bir konum</p>
+                <p className="mt-4 text-lg md:text-xl">Şehrin kalbinde, toplu ulaşıma yakın muhteşem bir konum</p>
 
                 <div className="mt-12 w-full">
                     <iframe
